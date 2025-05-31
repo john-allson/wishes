@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google AdSense -->
+    <!-- Replace YOUR-ADSENSE-CLIENT-ID with your actual AdSense client ID (looks like: ca-pub-XXXXXXXXXXXXXXXX) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ADSENSE-CLIENT-ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Wish Creation View -->
+            <div id="creationView" class="view">
+                <div class="input-section">
+                    <h1 class="animate-title">Create Birthday Wishes</h1>
+                    <div class="input-group">
+                        <input type="text" id="birthdayPerson" placeholder="Birthday Person's Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="wisherName" placeholder="Your Name" required>
+                    </div>
+                    <button id="generateWish" class="btn">Generate Wish</button>
+                </div>
+
+                <div id="shareLinkSection" class="share-link-section hidden">
+                    <h3>Share this wish with your friend</h3>
+                    <div class="link-container">
+                        <input type="text" id="shareLink" readonly>
+                        <button id="copyLink" class="btn">Copy Link</button>
+                    </div>
+                    <div class="share-buttons">
+                        <button class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></button>
+                        <button class="share-btn facebook"><i class="fab fa-facebook"></i></button>
+                        <button class="share-btn twitter"><i class="fab fa-twitter"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wish Viewing View -->
+            <div id="viewingView" class="view hidden">
+                <div class="wish-content">
+                    <div class="confetti-container"></div>
+                    <h2 class="animate-text">Happy Birthday <span id="highlightedName"></span>! 🎉</h2>
+                    <p id="wishMessage" class="fade-in"></p>
+                    <div class="wisher-signature">
+                        <p>With love,</p>
+                        <p id="signature"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-section">
+                <!-- Google AdSense Ad Unit -->
+                <!-- Replace both YOUR-ADSENSE-CLIENT-ID and YOUR-AD-SLOT-ID with your actual AdSense credentials -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="YOUR-ADSENSE-CLIENT-ID"
+                     data-ad-slot="YOUR-AD-SLOT-ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
