@@ -1,4 +1,4 @@
-/* script.js aaaa */
+/* script.js */
 
 document.addEventListener('DOMContentLoaded', () => {
     const creationView = document.getElementById('creationView');
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const highlightedName = document.getElementById('highlightedName');
     const wishMessage = document.getElementById('wishMessage');
     const signature = document.getElementById('signature');
+    const createNewWishBtn = document.getElementById('createNewWish');
 
     // Birthday messages templates
     const birthdayMessages = [
@@ -132,6 +133,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Create New Wish button functionality
+    createNewWishBtn.addEventListener('click', () => {
+        // Switch back to creation view
+        viewingView.classList.add('hidden');
+        creationView.classList.remove('hidden');
+        
+        // Clear inputs
+        birthdayPersonInput.value = '';
+        wisherNameInput.value = '';
+        
+        // Hide share link section if visible
+        shareLinkSection.classList.add('hidden');
+        
+        // Clear URL parameters
+        window.history.replaceState({}, document.title, window.location.pathname);
+    });
 
     // Add input animations
     const inputs = document.querySelectorAll('input');
