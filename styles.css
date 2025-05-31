@@ -327,3 +327,41 @@ input:focus {
         opacity: 1;
     }
 }
+
+/* Add these new styles after the existing styles */
+
+.create-new-wish {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    animation: fadeIn 0.5s ease-out 1s both;
+}
+
+.create-new-wish p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.secondary-btn {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    transform: scale(1.05);
+    background: #3dbeb4;
+    box-shadow: 0 5px 15px rgba(62, 205, 196, 0.4);
+}
+
+.secondary-btn:active {
+    transform: scale(0.95);
+}
