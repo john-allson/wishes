@@ -1,4 +1,4 @@
-/* script.js */
+/* script.js aaaa */
 
 document.addEventListener('DOMContentLoaded', () => {
     const creationView = document.getElementById('creationView');
